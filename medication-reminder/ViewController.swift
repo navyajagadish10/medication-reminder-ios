@@ -44,13 +44,13 @@ class ViewController: UIViewController, MedicationServiceDelegate, UITableViewDe
 
     // MARK: - UITableView Delegate and DataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*if medicationsArray.count > 0 {
+        if medicationsArray.count > 0 {
             return medicationsArray.count
         }
         else {
             return 1
-        }*/
-        return 10
+        }
+        //return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,13 +84,13 @@ class ViewController: UIViewController, MedicationServiceDelegate, UITableViewDe
                 dateFor.dateStyle = .medium
                 let cTimeComp = dateFor.string(from: ctime! as Date)
                 
-                /*if cTimeComp == todayDate {
-                    self.medicationsArray.append(item)
-                }*/
-                
-                if cTimeComp.contains("Sep 14") {
+                if cTimeComp == todayDate {
                     self.medicationsArray.append(item)
                 }
+                
+                /*if cTimeComp.contains("Sep 14") {
+                    self.medicationsArray.append(item)
+                }*/
             }
         }
         print(medicationsArray.count)
