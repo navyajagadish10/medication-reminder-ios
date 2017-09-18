@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4B5284162C3FCF41813EFE74 /* Pods_medication_reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99A76BCD6251483082C59DD /* Pods_medication_reminder.framework */; };
+		4E2B55CB1F6C43A800A8DCAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55CA1F6C43A800A8DCAE /* Constants.swift */; };
+		4E2B55CE1F6C471100A8DCAE /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55CD1F6C471100A8DCAE /* BaseService.swift */; };
+		4E2B55D11F6C47B600A8DCAE /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55D01F6C47B600A8DCAE /* BaseRouter.swift */; };
+		4E2B55D41F6C495300A8DCAE /* MedicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55D31F6C495300A8DCAE /* MedicationService.swift */; };
+		4E2B55D61F6DAAB000A8DCAE /* MedicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55D51F6DAAB000A8DCAE /* MedicationRouter.swift */; };
+		4E2B55D91F6DBAC400A8DCAE /* Medications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55D81F6DBAC400A8DCAE /* Medications.swift */; };
+		4E2B55DB1F6F164A00A8DCAE /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B55DA1F6F164A00A8DCAE /* MedicationTableViewCell.swift */; };
 		5B485DE01E7C753D0013B925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485DDF1E7C753D0013B925 /* AppDelegate.swift */; };
 		5B485DE21E7C753D0013B925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485DE11E7C753D0013B925 /* ViewController.swift */; };
 		5B485DE51E7C753D0013B925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B485DE31E7C753D0013B925 /* Main.storyboard */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E2B55CA1F6C43A800A8DCAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E2B55CD1F6C471100A8DCAE /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		4E2B55D01F6C47B600A8DCAE /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		4E2B55D31F6C495300A8DCAE /* MedicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationService.swift; sourceTree = "<group>"; };
+		4E2B55D51F6DAAB000A8DCAE /* MedicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationRouter.swift; sourceTree = "<group>"; };
+		4E2B55D81F6DBAC400A8DCAE /* Medications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medications.swift; sourceTree = "<group>"; };
+		4E2B55DA1F6F164A00A8DCAE /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
 		5B485DDC1E7C753D0013B925 /* medication-reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medication-reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B485DDF1E7C753D0013B925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B485DE11E7C753D0013B925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +54,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2B55C91F6C438B00A8DCAE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B55CA1F6C43A800A8DCAE /* Constants.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		4E2B55CC1F6C46F400A8DCAE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B55CD1F6C471100A8DCAE /* BaseService.swift */,
+				4E2B55D31F6C495300A8DCAE /* MedicationService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		4E2B55CF1F6C47A400A8DCAE /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B55D01F6C47B600A8DCAE /* BaseRouter.swift */,
+				4E2B55D51F6DAAB000A8DCAE /* MedicationRouter.swift */,
+			);
+			name = Routers;
+			sourceTree = "<group>";
+		};
+		4E2B55D21F6C48C800A8DCAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B485DE11E7C753D0013B925 /* ViewController.swift */,
+				4E2B55DA1F6F164A00A8DCAE /* MedicationTableViewCell.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4E2B55D71F6DBAA400A8DCAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B55D81F6DBAC400A8DCAE /* Medications.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		5B485DD31E7C753D0013B925 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +118,12 @@
 		5B485DDE1E7C753D0013B925 /* medication-reminder */ = {
 			isa = PBXGroup;
 			children = (
+				4E2B55D71F6DBAA400A8DCAE /* Models */,
+				4E2B55D21F6C48C800A8DCAE /* ViewControllers */,
+				4E2B55CF1F6C47A400A8DCAE /* Routers */,
+				4E2B55CC1F6C46F400A8DCAE /* Service */,
+				4E2B55C91F6C438B00A8DCAE /* Helpers */,
 				5B485DDF1E7C753D0013B925 /* AppDelegate.swift */,
-				5B485DE11E7C753D0013B925 /* ViewController.swift */,
 				5B485DE31E7C753D0013B925 /* Main.storyboard */,
 				5B485DE61E7C753D0013B925 /* Assets.xcassets */,
 				5B485DE81E7C753D0013B925 /* LaunchScreen.storyboard */,
@@ -212,7 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B485DE21E7C753D0013B925 /* ViewController.swift in Sources */,
+				4E2B55D41F6C495300A8DCAE /* MedicationService.swift in Sources */,
+				4E2B55D11F6C47B600A8DCAE /* BaseRouter.swift in Sources */,
+				4E2B55D91F6DBAC400A8DCAE /* Medications.swift in Sources */,
 				5B485DE01E7C753D0013B925 /* AppDelegate.swift in Sources */,
+				4E2B55CE1F6C471100A8DCAE /* BaseService.swift in Sources */,
+				4E2B55CB1F6C43A800A8DCAE /* Constants.swift in Sources */,
+				4E2B55DB1F6F164A00A8DCAE /* MedicationTableViewCell.swift in Sources */,
+				4E2B55D61F6DAAB000A8DCAE /* MedicationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +444,7 @@
 				5B485DF01E7C753D0013B925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

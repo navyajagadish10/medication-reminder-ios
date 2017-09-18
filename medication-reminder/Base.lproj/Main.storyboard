@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="medication_reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-FP-2be">
+                                <rect key="frame" x="16" y="125" width="343" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="522" id="YgU-QA-TeZ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" rowHeight="60" id="1Aj-7o-T1e" customClass="MedicationTableViewCell" customModule="medication_reminder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Aj-7o-T1e" id="lK6-1e-v3S">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nj-fn-25W">
+                                                    <rect key="frame" x="16" y="8" width="78.5" height="37"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ly8-ig-hZc">
+                                                    <rect key="frame" x="276" y="14" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9nj-fn-25W" firstAttribute="leading" secondItem="lK6-1e-v3S" secondAttribute="leading" constant="16" id="5mN-rP-S4A"/>
+                                                <constraint firstItem="ly8-ig-hZc" firstAttribute="top" secondItem="lK6-1e-v3S" secondAttribute="top" constant="14" id="AJq-B9-Rzk"/>
+                                                <constraint firstItem="9nj-fn-25W" firstAttribute="top" secondItem="lK6-1e-v3S" secondAttribute="top" constant="8" id="j8R-LJ-ocv"/>
+                                                <constraint firstAttribute="trailing" secondItem="ly8-ig-hZc" secondAttribute="trailing" constant="18" id="tMq-rs-3f9"/>
+                                                <constraint firstAttribute="bottom" secondItem="9nj-fn-25W" secondAttribute="bottom" constant="14.5" id="upy-l8-3OS"/>
+                                                <constraint firstAttribute="bottom" secondItem="ly8-ig-hZc" secondAttribute="bottom" constant="14.5" id="wPT-TT-rWG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="indicatorSwitch" destination="ly8-ig-hZc" id="4Es-qG-mKT"/>
+                                            <outlet property="medicationName" destination="9nj-fn-25W" id="0sV-dA-fGg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bLi-u9-FIE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aHM-bg-WtC"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Si9-ig-PRA">
+                                <rect key="frame" x="16" y="20" width="343" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esa-XG-oHr">
+                                        <rect key="frame" x="125" y="17" width="92" height="63"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29538407921791077" green="0.71060562133789062" blue="0.91482597589492798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="esa-XG-oHr" firstAttribute="top" secondItem="Si9-ig-PRA" secondAttribute="top" constant="17" id="OUm-D3-gID"/>
+                                    <constraint firstItem="esa-XG-oHr" firstAttribute="centerX" secondItem="Si9-ig-PRA" secondAttribute="centerX" id="isS-g8-vme"/>
+                                    <constraint firstItem="esa-XG-oHr" firstAttribute="centerY" secondItem="Si9-ig-PRA" secondAttribute="centerY" id="vd8-Vl-0SF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52776842820000003" green="0.77102982350000004" blue="0.85592104729999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="leading" secondItem="Si9-ig-PRA" secondAttribute="leading" id="1Y5-4K-MtI"/>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="trailing" secondItem="Si9-ig-PRA" secondAttribute="trailing" id="AGr-am-bev"/>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EMs-P7-gGd"/>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="top" secondItem="Si9-ig-PRA" secondAttribute="bottom" constant="8" symbolic="YES" id="PAX-kH-PKx"/>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="top" secondItem="Si9-ig-PRA" secondAttribute="bottom" constant="8" id="aRg-oh-eUT"/>
+                            <constraint firstAttribute="bottom" secondItem="TFQ-FP-2be" secondAttribute="bottom" constant="20" symbolic="YES" id="al2-dL-hoD"/>
+                            <constraint firstItem="Si9-ig-PRA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bcK-Nu-vfq"/>
+                            <constraint firstItem="TFQ-FP-2be" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dIc-lw-LLX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentDateAndTime" destination="esa-XG-oHr" id="lPf-59-hmm"/>
+                        <outlet property="medicationTableView" destination="TFQ-FP-2be" id="hgw-yV-pt1"/>
+                        <outlet property="myView" destination="Si9-ig-PRA" id="YzV-Fd-XAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-308" y="-92.203898050974516"/>
         </scene>
     </scenes>
 </document>
